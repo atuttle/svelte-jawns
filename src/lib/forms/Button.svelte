@@ -25,7 +25,7 @@
 
 	// PROPS
 	let passThruClasses: string = '';
-	export let variant: keyof typeof variantMap = 'gray';
+	export let variant: keyof typeof variantMap = 'tertiary';
 	export { passThruClasses as class };
 	let isDisabled: boolean = false;
 	export { isDisabled as disabled };

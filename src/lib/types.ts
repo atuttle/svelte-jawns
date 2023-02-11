@@ -2,7 +2,6 @@ export type InputType =
 	| 'text'
 	| 'email'
 	| 'password'
-	| 'number'
 	| 'tel'
 	| 'search'
 	| 'date'
@@ -12,5 +11,12 @@ export type InputType =
 export interface Theme {
 	borderRadius: string;
 	button: string;
+	buttonColorsCTA: string;
+	buttonColorsDanger: string;
+	buttonColorsDisabled: string;
+	buttonColorsGray: string;
+	buttonColorsSubtle: string;
+	buttonColorsTertiary: string;
 	disabled: string;
+	textInput: string;
 }

@@ -7,7 +7,7 @@
 </script>
 
 <Hst.Story title="forms/Button" layout={{ type: 'grid' }}>
-	<Hst.Variant title="default">
+	<Hst.Variant title="default (tertiary)">
 		<Button>click me</Button>
 	</Hst.Variant>
 	<Hst.Variant title="Brand">
