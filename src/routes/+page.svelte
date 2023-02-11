@@ -1,3 +1,4 @@
-<h1>Welcome to your library project</h1>
-<p>Create your package using @sveltejs/package and preview/showcase your work with SvelteKit</p>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<img src="favicon.png" class="w-24" alt="JAWN logo (inspired by Wawa logo)" />
+<h1>Svelte Jawns</h1>
+
+<p style="text-align: center"><em>Go birds!</em></p>
