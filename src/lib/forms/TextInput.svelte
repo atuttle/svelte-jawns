@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { InputType } from '$lib/types';
+	import { getContext, hasContext } from 'svelte';
 	import type { HTMLInputAttributes } from 'svelte/elements';
 	interface $$Props extends HTMLInputAttributes {
 		type: InputType;
@@ -14,7 +15,20 @@
 
 	let passThruClasses: string = '';
 	export { passThruClasses as class };
-	const classes = `${$borderRadius} ${$textInput} ${passThruClasses}`;
+	let classes = `${$borderRadius} ${$textInput} ${passThruClasses}`;
+
+	const inInputGroup = hasContext('inputGroup') ? getContext('inputGroup') : false;
+	const inputGroupMode = hasContext('inputGroupMode') ? getContext('inputGroupMode') : null;
+	if (inInputGroup) {
+		classes = classes + ' flex-1';
+		if (inputGroupMode === 'left') {
+			classes = classes + ' rounded-l-none';
+		} else if (inputGroupMode === 'right') {
+			classes = classes + ' rounded-r-none';
+		} else if (inputGroupMode === 'both') {
+			classes = classes + ' rounded-none';
+		}
+	}
 
 	// This components makes use of $$restProps which is generally discouraged
 	// for optimization reasons, but I think this is the reason it exists...
@@ -27,8 +41,6 @@
 	<input type="password" {...$$restProps} bind:value class={classes} />
 {:else if type === 'email'}
 	<input type="email" {...$$restProps} bind:value class={classes} />
-{:else if type === 'number'}
-	<input type="number" {...$$restProps} bind:value class={classes} />
 {:else if type === 'tel'}
 	<input type="tel" {...$$restProps} bind:value class={classes} />
 {:else if type === 'url'}

@@ -19,4 +19,5 @@ export interface Theme {
 	buttonColorsTertiary: string;
 	disabled: string;
 	textInput: string;
+	textInputAddon: string;
 }

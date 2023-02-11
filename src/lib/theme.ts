@@ -16,6 +16,9 @@ export const buttonColorsSubtle = writable<string>(
 );
 export const buttonColorsDisabled = writable<string>('bg-gray-200 text-gray-500');
 
+export const textInputAddon = writable<string>(
+	'border-slate-300 bg-slate-200 text-slate-800 border px-2'
+);
 export const textInput = writable<string>(
 	'px-4 py-2 rounded border-slate-300 bg-slate text-slate-800 w-full'
 );
