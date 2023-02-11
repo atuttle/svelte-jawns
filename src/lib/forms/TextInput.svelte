@@ -2,8 +2,8 @@
 	import type { InputType } from '$lib/types';
 	import type { HTMLInputAttributes } from 'svelte/elements';
 	interface $$Props extends HTMLInputAttributes {
-		value?: string;
 		type: InputType;
+		value?: string;
 		class?: string;
 	}
 
