@@ -5,6 +5,8 @@ export const transitionDurationMS = writable<number>(200);
 
 export const typography = writable<string>(`antialiased`);
 export const headings = writable<string>(`font-bold`);
+export const panelBg = writable<string>(`bg-zinc-100`);
+export const panelShadow = writable<string>(`drop-shadow-md`);
 
 export const borderRadius = writable<string>(`rounded`);
 export const disabled = writable<string>('cursor-not-allowed');
