@@ -1,10 +1,8 @@
 <script lang="ts">
-	import Dialog from './Dialog.svelte';
-	import Button from '$lib/forms/Button.svelte';
+	import Dialog from '$lib/layout/Dialog.svelte';
+	import Button from '$lib/inputs/Button.svelte';
 
 	import type { Hst } from '@histoire/plugin-svelte';
-	import { Heading } from '$lib/typography/index';
-
 	export let Hst: Hst;
 
 	function handleDialogClose() {

@@ -1,11 +1,11 @@
 <script lang="ts">
 	import type { Hst } from '@histoire/plugin-svelte';
+	import ButtonGroup from '$lib/inputs/ButtonGroup.svelte';
+	import Button from '$lib/inputs/Button.svelte';
 	export let Hst: Hst;
-	import ButtonGroup from '$lib/forms/ButtonGroup.svelte';
-	import Button from '$lib/forms/Button.svelte';
 </script>
 
-<Hst.Story title="forms/ButtonGroup" layout={{ type: 'grid', width: 400 }}>
+<Hst.Story title="inputs/ButtonGroup" layout={{ type: 'grid', width: 400 }}>
 	<Hst.Variant title="Horizontal">
 		<ButtonGroup>
 			<Button variant="cta">Foo</Button>

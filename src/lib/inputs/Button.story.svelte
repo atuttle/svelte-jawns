@@ -1,12 +1,12 @@
 <script lang="ts">
-	import Button from './Button.svelte';
+	import Button from '$lib/inputs/Button.svelte';
 
 	import type { Hst } from '@histoire/plugin-svelte';
 
 	export let Hst: Hst;
 </script>
 
-<Hst.Story title="forms/Button" layout={{ type: 'grid', width: 300 }}>
+<Hst.Story title="inputs/Button" layout={{ type: 'grid', width: 300 }}>
 	<Hst.Variant title="Brand">
 		<Button variant="brand">click me</Button>
 	</Hst.Variant>

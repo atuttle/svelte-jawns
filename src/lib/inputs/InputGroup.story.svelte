@@ -1,12 +1,12 @@
 <script lang="ts">
 	import type { Hst } from '@histoire/plugin-svelte';
 	export let Hst: Hst;
-	import InputGroup from './InputGroup.svelte';
-	import InputGroupText from './InputGroupText.svelte';
-	import TextInput from './TextInput.svelte';
+	import InputGroup from '$lib/inputs/InputGroup.svelte';
+	import InputGroupText from '$lib/inputs/InputGroupText.svelte';
+	import TextInput from '$lib/inputs/TextInput.svelte';
 </script>
 
-<Hst.Story title="forms/InputGroup" layout={{ type: 'grid', width: '500px' }}>
+<Hst.Story title="inputs/InputGroup" layout={{ type: 'grid', width: '500px' }}>
 	<Hst.Variant title="Left">
 		<InputGroup mode="left">
 			<InputGroupText slot="left" position="left">@</InputGroupText>

@@ -1,9 +1,9 @@
 <script lang="ts">
 	import type { Hst } from '@histoire/plugin-svelte';
 	export let Hst: Hst;
-	import Form from './Form.svelte';
-	import FormField from './FormField.svelte';
-	import TextInput from './TextInput.svelte';
+	import Form from '$lib/forms/Form.svelte';
+	import FormField from '$lib/forms/FormField.svelte';
+	import TextInput from '$lib/inputs/TextInput.svelte';
 </script>
 
 <Hst.Story title="forms/Form">

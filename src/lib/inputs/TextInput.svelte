@@ -8,7 +8,7 @@
 		class?: string;
 	}
 
-	import { borderRadius, textInput } from '../theme';
+	import { borderRadius, textInput } from '$lib/theme';
 
 	export let value: string = '';
 	export let type: InputType = 'text';

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { borderRadius, textInput } from '../theme';
+	import { borderRadius, textInput } from '$lib/theme';
 
 	export let value: string;
 	export let rows: number = 4;

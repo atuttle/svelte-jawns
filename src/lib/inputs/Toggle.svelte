@@ -9,7 +9,7 @@
 	} from '$lib/theme';
 
 	export let checked: boolean = false;
-	export let height: number = 30;
+	export let size: number = 30;
 	export let gutterBGColorOff: string = '';
 	export let gutterBGColorOn: string = '';
 	export let gutterBorderOff: string = '';
@@ -39,7 +39,7 @@
 		--switchOff: var(--userSwitchOff, var(--themeSwitchOff));
 		--switchOn: var(--userSwitchOn, var(--themeSwitchOn));
 
-		--height: ${height}px;
+		--height: ${size}px;
 	`;
 </script>
 

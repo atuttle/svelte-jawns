@@ -1,6 +1,6 @@
 <script lang="ts">
-	import ModalDialog from './ModalDialog.svelte';
-	import Button from '$lib/forms/Button.svelte';
+	import ModalDialog from '$lib/layout/ModalDialog.svelte';
+	import Button from '$lib/inputs/Button.svelte';
 
 	import type { Hst } from '@histoire/plugin-svelte';
 

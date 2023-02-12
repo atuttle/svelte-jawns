@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Button from '$lib/forms/Button.svelte';
 	import { createEventDispatcher } from 'svelte';
 	import { borderRadius, panelBg, panelShadow, transitionDurationMS } from '$lib/theme';
 	import { slide } from 'svelte/transition';
 	import { Heading } from '$lib/typography';
+	import Button from '$lib/inputs/Button.svelte';
 	const dispatch = createEventDispatcher();
 
 	function close() {

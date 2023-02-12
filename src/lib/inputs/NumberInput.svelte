@@ -10,7 +10,7 @@
 	}
 
 	import { getContext, hasContext } from 'svelte';
-	import { borderRadius, textInput } from '../theme';
+	import { borderRadius, textInput } from '$lib/theme';
 
 	export let value: number | undefined;
 
