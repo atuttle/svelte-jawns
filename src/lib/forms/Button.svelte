@@ -9,12 +9,16 @@
 		buttonColorsGray,
 		buttonColorsSubtle,
 		buttonColorsTertiary,
+		buttonColorsCTAOutline,
+		buttonColorsDangerOutline,
+		buttonColorsGrayOutline,
+		buttonColorsTertiaryOutline,
 		disabled
 	} from '$lib/theme';
 
 	const createMaps = <ObjectMapType extends Record<string, string>>(obj: ObjectMapType) => obj;
 	const variantMap = createMaps({
-		brand: 'border-iqBlueBright bg-iqBlue text-iqYellow hover:bg-iqBlueBright',
+		brand: 'border-iqBlue bg-iqBlue text-iqYellow hover:bg-iqBlueBright hover:border-iqBlueBright',
 		cta: $buttonColorsCTA,
 		tertiary: $buttonColorsTertiary,
 		danger: $buttonColorsDanger,
@@ -30,14 +34,7 @@
 	let isDisabled: boolean = false;
 	export { isDisabled as disabled };
 
-	// passThruClasses = passThruClasses ?? '';
-
 	const isButtonGroup: boolean = hasContext('buttonGroup') ? getContext('buttonGroup') : false;
-	export let outline: boolean = false;
-	//if outline button is requested but variant is brand or disabled, override to false
-	outline =
-		outline === false ? false : variant !== 'brand' && variant !== 'disabled' && !isDisabled;
-	const outlineClass = !outline ? '' : `bg-transparent`;
 
 	//if disabled, override to gray variant
 	let disabledClass = '';
@@ -46,14 +43,30 @@
 	disabledClass = isDisabled || selectedVariant === 'disabled' ? $disabled : '';
 
 	const groupStyle = isButtonGroup ? '' : `${$borderRadius}`;
-	const themeClasses = `${groupStyle} ${$button} ${disabledClass} ${outlineClass}`;
-	const variantClasses = variantMap[selectedVariant];
+	const themeClasses = `${groupStyle} ${$button} ${disabledClass}`;
+	let variantClasses = variantMap[selectedVariant];
+
+	export let outline: boolean = false;
+	//if outline button is requested but variant is brand, subtle, or disabled, override to false
+	if (selectedVariant === 'disabled') outline = false;
+	if (selectedVariant === 'brand') outline = false;
+	if (selectedVariant === 'subtle') outline = false;
+	if (isDisabled) outline = false;
+
+	if (outline) {
+		const outlineVariantMap = createMaps({
+			cta: $buttonColorsCTAOutline,
+			tertiary: $buttonColorsTertiaryOutline,
+			danger: $buttonColorsDangerOutline,
+			gray: $buttonColorsGrayOutline
+		});
+		const selectedOutlineVariant = selectedVariant as keyof typeof outlineVariantMap;
+		variantClasses = outlineVariantMap[selectedOutlineVariant];
+	}
+
+	let allClasses = `${themeClasses} ${variantClasses} ${passThruClasses} font-semibold antialiased transition`;
 </script>
 
-<button
-	on:click
-	disabled={isDisabled}
-	class="{themeClasses} {variantClasses} {passThruClasses} font-semibold antialiased transition"
->
+<button on:click disabled={isDisabled} class={allClasses}>
 	<slot />
 </button>

@@ -13,6 +13,13 @@
 			<Button variant="brand">Baz</Button>
 		</ButtonGroup>
 	</Hst.Variant>
+	<Hst.Variant title="Subtle buttons">
+		<ButtonGroup>
+			<Button variant="subtle">Foo</Button>
+			<Button variant="subtle">Bar</Button>
+			<Button variant="subtle">Baz</Button>
+		</ButtonGroup>
+	</Hst.Variant>
 	<Hst.Variant title="Vertical">
 		<ButtonGroup stack={true}>
 			<Button variant="cta">Foo</Button>
