@@ -4,6 +4,8 @@ import type { Theme } from './types';
 export const transitionDurationMS = writable<number>(200);
 
 export const typography = writable<string>(`antialiased`);
+export const breathingRoom = writable<string>(`px-4 py-2`);
+export const blockSpacing = writable<string>(`mb-4`);
 export const headings = writable<string>(`font-bold`);
 export const panelBg = writable<string>(`bg-zinc-100`);
 export const panelShadow = writable<string>(`drop-shadow-md`);

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Button from '$lib/forms/Button.svelte';
 	import { createEventDispatcher } from 'svelte';
-	import { borderRadius, transitionDurationMS } from '$lib/theme';
+	import { borderRadius, panelBg, panelShadow, transitionDurationMS } from '$lib/theme';
 	import { slide } from 'svelte/transition';
 	import { Heading } from '$lib/typography';
 	const dispatch = createEventDispatcher();
@@ -22,12 +22,12 @@
 </script>
 
 <div
-	class="relative top-20 mx-auto w-3/4 max-w-5xl {$borderRadius} bg-neutral-50 p-5 shadow-lg {classPassThru}"
+	class="relative top-20 mx-auto w-3/4 max-w-5xl p-5 {$borderRadius} {$panelBg} {$panelShadow} {classPassThru}"
 	transition:slide={{ duration: $transitionDurationMS }}
 	on:click|stopPropagation={stopInternalClicksFromClosingModal}
 	on:keypress|stopPropagation={stopInternalClicksFromClosingModal}
 >
-	<div class="border-b pb-3 flex">
+	<div class="flex border-b pb-3">
 		<div class="flex-auto">
 			<Heading level={3}>{title}</Heading>
 		</div>
