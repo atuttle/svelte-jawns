@@ -1,6 +1,9 @@
 import { writable } from 'svelte/store';
 import type { Theme } from './types';
 
+export const typography = writable<string>(`antialiased`);
+export const headings = writable<string>(`font-bold`);
+
 export const borderRadius = writable<string>(`rounded`);
 export const disabled = writable<string>('cursor-not-allowed');
 

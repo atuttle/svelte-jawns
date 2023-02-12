@@ -6,7 +6,7 @@
 	export let Hst: Hst;
 </script>
 
-<Hst.Story title="typography/Heading" layout={{ type: 'grid', width: 200 }}>
+<Hst.Story title="typography/Heading" layout={{ type: 'grid', width: 350 }}>
 	<Hst.Variant title="H1">
 		<Heading level={1}>Heading 1</Heading>
 	</Hst.Variant>
