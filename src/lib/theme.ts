@@ -28,6 +28,14 @@ export const textInput = writable<string>(
 	'px-4 py-2 rounded border-slate-300 bg-slate text-slate-800 w-full'
 );
 
+
+export const toggleBgOff = writable<string>('#e5e5e5');
+export const toggleBgOn = writable<string>('#dcfce7');
+export const toggleBgBorderOff = writable<string>('1px solid transparent');
+export const toggleBgBorderOn = writable<string>('1px solid transparent');
+export const toggleSwitchOff = writable<string>('#71717a');
+export const toggleSwitchOn = writable<string>('#22c55e');
+
 export const setTheme = (theme: Partial<Theme>) => {
 	if (theme.borderRadius) {
 		borderRadius.set(theme.borderRadius);
