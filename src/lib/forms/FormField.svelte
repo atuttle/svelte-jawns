@@ -11,8 +11,8 @@
 		: 'w-1/4';
 </script>
 
-<div class="py-2 flex max-w-full items-start {stack ? 'flex-col' : ''}">
-	<label for={labelFor} class="pt-2 pr-4 h-full font-semibold inline-block text-right {labelWidth}"
+<div class="flex max-w-full items-start py-2 {stack ? 'flex-col' : ''}">
+	<label for={labelFor} class="inline-block h-full pt-2 pr-4 text-right font-semibold {labelWidth}"
 		>{label}</label
 	>
 	<div class="flex-1">

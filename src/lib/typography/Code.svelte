@@ -5,7 +5,7 @@
 </script>
 
 <code
-	class={`bg-pink-100 text-red-800 py-0 px-1 ${
+	class={`bg-pink-100 py-0 px-1 text-red-800 ${
 		block ? 'block overflow-x-scroll whitespace-pre' : 'inline'
 	} ${classProp}`}><slot /></code
 >
