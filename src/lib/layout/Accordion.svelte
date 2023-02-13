@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
 
-	import { transitionDurationMS, breathingRoom } from '$lib/theme';
+	import { transitionDurationMS, blockPadding } from '$lib/theme';
 	import { slide } from '$lib/animations';
 	import Panel from '$lib/layout/Panel.svelte';
 	import Heading from '$lib/typography/Heading.svelte';
@@ -29,7 +29,7 @@
 		</slot>
 	</div>
 	<div use:slide={{ open, duration: $transitionDurationMS }}>
-		<div class={$breathingRoom}>
+		<div class={$blockPadding}>
 			<hr class="mb-2" />
 			<slot name="body" />
 		</div>

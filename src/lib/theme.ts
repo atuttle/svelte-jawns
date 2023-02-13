@@ -4,7 +4,7 @@ import type { Theme } from './types';
 export const transitionDurationMS = writable<number>(200);
 
 export const typography = writable<string>(`antialiased`);
-export const breathingRoom = writable<string>(`px-4 py-2`);
+export const blockPadding = writable<string>(`px-4 py-2`);
 export const blockSpacing = writable<string>(`mb-4`);
 export const headings = writable<string>(`font-bold`);
 export const panelBg = writable<string>(`bg-zinc-100`);
@@ -46,7 +46,7 @@ export const textInputAddon = writable<string>(
 	'border-slate-300 bg-slate-200 text-slate-800 border px-2'
 );
 export const textInput = writable<string>(
-	`${breathingRoom} rounded border-slate-300 bg-slate text-slate-800 w-full`
+	`px-4 py-2 rounded border-slate-300 bg-slate text-slate-800 w-full`
 );
 
 export const toggleBgOff = writable<string>('#e5e5e5');
