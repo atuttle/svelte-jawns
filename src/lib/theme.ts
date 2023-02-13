@@ -13,6 +13,11 @@ export const panelShadow = writable<string>(`drop-shadow-md`);
 export const borderRadius = writable<string>(`rounded`);
 export const disabled = writable<string>('cursor-not-allowed');
 
+export const alertColorsCTA = writable<string>(`bg-green-200 text-green-800`);
+export const alertColorsTertiary = writable<string>(`bg-slate-300 text-slate-800`);
+export const alertColorsDanger = writable<string>(`bg-red-200 text-red-800`);
+export const alertColorsSubtle = writable<string>(`bg-neutral-100 text-neutral-800`);
+
 export const button = writable<string>(`border-2 px-4 py-2`);
 export const buttonColorsCTA = writable<string>('border-green-600 bg-green-600 text-gray-100 hover:bg-green-500 hover:border-green-500');
 export const buttonColorsCTAOutline = writable<string>(
