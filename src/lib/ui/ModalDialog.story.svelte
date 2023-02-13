@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ModalDialog from '$lib/layout/ModalDialog.svelte';
+	import ModalDialog from '$lib/ui/ModalDialog.svelte';
 	import Button from '$lib/inputs/Button.svelte';
 
 	import type { Hst } from '@histoire/plugin-svelte';
@@ -13,7 +13,7 @@
 	export let Hst: Hst;
 </script>
 
-<Hst.Story title="layout/ModalDialog">
+<Hst.Story title="ui/ModalDialog">
 	<svelte:fragment slot="controls">
 		<Button on:click={() => (modalOpen = !modalOpen)}>Toggle Modal</Button>
 	</svelte:fragment>

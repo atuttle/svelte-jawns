@@ -2,7 +2,7 @@
 	import { createEventDispatcher } from 'svelte';
 
 	import Modal from '$lib/DOM/Modal.svelte';
-	import Dialog from '$lib/layout/Dialog.svelte';
+	import Dialog from '$lib/ui/Dialog.svelte';
 
 	export let allowClose: boolean = true;
 	export let closeOnBackgroundClick: boolean = true;

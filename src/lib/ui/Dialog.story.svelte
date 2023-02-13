@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Dialog from '$lib/layout/Dialog.svelte';
+	import Dialog from '$lib/ui/Dialog.svelte';
 	import Button from '$lib/inputs/Button.svelte';
 
 	import type { Hst } from '@histoire/plugin-svelte';
@@ -13,7 +13,7 @@
 	}
 </script>
 
-<Hst.Story title="layout/Dialog">
+<Hst.Story title="ui/Dialog">
 	<Dialog on:close={handleDialogClose} title="Confirm Password Reset">
 		<div slot="body">
 			<p>Are you sure you want to reset your password?</p>

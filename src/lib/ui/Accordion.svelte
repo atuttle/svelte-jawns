@@ -3,7 +3,7 @@
 
 	import { transitionDurationMS, blockPadding } from '$lib/theme';
 	import { slide } from '$lib/animations';
-	import Panel from '$lib/layout/Panel.svelte';
+	import Panel from '$lib/ui/Panel.svelte';
 	import Heading from '$lib/typography/Heading.svelte';
 
 	export let open: boolean = false;
