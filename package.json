@@ -1,5 +1,5 @@
 {
-	"name": "@alumniq/svelte-jawns",
+	"name": "svelte-jawns",
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "vite dev",
