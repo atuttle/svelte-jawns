@@ -1,38 +1,9 @@
-# create-svelte
+![Svelte Jawns Logo, which is the Wawa logo with the text replaced with the word "Jawn"](https://github.com/atuttle/svelte-jawns/blob/main/static/favicon.png?raw=true)
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+# Svelte Jawns
 
-## Creating a project
+A collection of Svelte components styled with TailwindCSS.
 
-If you're seeing this, you've probably already done this step. Congrats!
+Work very much still in progress.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+[See component demos here.](https://svelte-jawns.surge.sh)
