@@ -1,4 +1,8 @@
 <script lang="ts">
+	// This components makes use of $$restProps which is generally discouraged
+	// for optimization reasons, but I think this is the reason it exists...
+	// https://svelte.dev/docs#template-syntax-attributes-and-props
+
 	import type { InputType } from '$lib/types';
 	import { getContext, hasContext } from 'svelte';
 	import type { HTMLInputAttributes } from 'svelte/elements';
@@ -30,25 +34,10 @@
 		}
 	}
 
-	// This components makes use of $$restProps which is generally discouraged
-	// for optimization reasons, but I think this is the reason it exists...
-	// https://svelte.dev/docs#template-syntax-attributes-and-props
+	//since we don't allow numeric inputs in this TextInput component, we can assume the value should be a string
+	function handleInput(event: Event) {
+		value = (event.target as HTMLInputElement).value;
+	}
 </script>
 
-{#if type === 'text'}
-	<input type="text" {...$$restProps} bind:value class={classes} />
-{:else if type === 'password'}
-	<input type="password" {...$$restProps} bind:value class={classes} />
-{:else if type === 'email'}
-	<input type="email" {...$$restProps} bind:value class={classes} />
-{:else if type === 'tel'}
-	<input type="tel" {...$$restProps} bind:value class={classes} />
-{:else if type === 'url'}
-	<input type="url" {...$$restProps} bind:value class={classes} />
-{:else if type === 'search'}
-	<input type="search" {...$$restProps} bind:value class={classes} />
-{:else if type === 'date'}
-	<input type="date" {...$$restProps} bind:value class={classes} />
-{:else if type === 'time'}
-	<input type="time" {...$$restProps} bind:value class={classes} />
-{/if}
+<input {...$$restProps} {type} {value} class={classes} on:input={handleInput} />
