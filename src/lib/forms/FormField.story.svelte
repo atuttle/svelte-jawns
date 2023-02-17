@@ -6,9 +6,8 @@
 </script>
 
 <Hst.Story title="forms/FormField">
-	<FormField label="First Name" labelFor="fname">
-		<TextInput type="text" value="Ford" id="fname" />
-	</FormField>
+	<FormField input={TextInput} type="text" label="First Name" id="fname" value="Ford" />
+	<FormField input="input" type="color" label="Favorite Color" id="faveColor" value="#62f524" />
 
 	todo: errors, help notes
 </Hst.Story>
