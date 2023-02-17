@@ -13,6 +13,6 @@
 			: 'rounded-none border-r-0');
 </script>
 
-<div class="{$textInputAddon} flex items-center {rounding}">
+<div class="{$textInputAddon} flex items-center {rounding}" {...$$restProps}>
 	<slot />
 </div>

@@ -15,3 +15,9 @@ export interface Theme {
 	textInput: string;
 	textInputAddon: string;
 }
+
+type ValuePrimitive = string | number | boolean | null;
+export type DataTableData = Array<{ [key: string]: ValuePrimitive }>
+
+type DataTableColumnConfig = Partial<{ label: string, justify: 'left' | 'right' | 'center', sortable: boolean, formatter: (value: ValuePrimitive) => ValuePrimitive }>
+export type DataTableConfig = { [key: string]: DataTableColumnConfig };
