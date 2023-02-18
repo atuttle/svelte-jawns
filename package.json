@@ -13,7 +13,8 @@
 		"format": "prettier --plugin-search-dir . --write .",
 		"story:dev": "histoire dev",
 		"story:build": "histoire build",
-		"story:preview": "histoire preview"
+		"story:preview": "histoire preview",
+		"story:publish": "npm run story:build && cd .histoire/dist && surge . --domain svelte-jawns.surge.sh && cd ../.."
 	},
 	"devDependencies": {
 		"@histoire/plugin-svelte": "^0.14.2",
