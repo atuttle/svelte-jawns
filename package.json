@@ -1,6 +1,20 @@
 {
 	"name": "svelte-jawns",
 	"version": "0.0.1",
+	"license": "MIT",
+	"type": "module",
+	"description": "A customizable Svelte component library built with Tailwind and TypeScript",
+	"homepage": "https://github.com/atuttle/svelte-jawns#readme",
+	"bugs": "https://github.com/atuttle/svelte-jawns/issues",
+	"author": "Adam Tuttle <adamtuttlecodes@gmail.com> (https://adamtuttle.codes)",
+	"repository": "github:atuttle/svelte-jawns",
+	"main": "index.js",
+	"keywords": [
+		"svelte",
+		"tailwind",
+		"typescript",
+		"components"
+	],
 	"scripts": {
 		"dev": "vite dev",
 		"build": "svelte-kit sync && svelte-package",
@@ -13,8 +27,7 @@
 		"format": "prettier --plugin-search-dir . --write .",
 		"story:dev": "histoire dev",
 		"story:build": "histoire build",
-		"story:preview": "histoire preview",
-		"story:publish": "npm run story:build && cd .histoire/dist && surge . --domain svelte-jawns.surge.sh && cd ../.."
+		"story:preview": "histoire preview"
 	},
 	"devDependencies": {
 		"@histoire/plugin-svelte": "^0.14.2",
@@ -43,6 +56,5 @@
 		"typescript": "^4.9.3",
 		"vite": "^4.0.0",
 		"vitest": "^0.25.3"
-	},
-	"type": "module"
+	}
 }
