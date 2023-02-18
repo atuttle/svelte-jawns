@@ -15,5 +15,5 @@ If you're going to use these components in your project you have to have Tawilwi
 Edit your **tailwind.config.cjs** to add the `svelte-jawns` folder (inside `node_modules/`) as content that Tailwind JIT should consider:
 
 ```js
-content: ['./src/**/*.{html,js,svelte,ts}','./node_modules/svelte-jawns/**/*.{html,js,svelte,ts}'],
+content: [...,'./node_modules/svelte-jawns/**/*.{html,js,svelte,ts}'],
 ```
