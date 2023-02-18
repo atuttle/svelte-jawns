@@ -10,6 +10,12 @@ jobs:
     name: Publish to svelte-jawns.surge.sh
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Source Code
+        id: git-checkout
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        id: build
+        run: npm i
       - name: Build histoire
         id: build
         run: npm run story:build
