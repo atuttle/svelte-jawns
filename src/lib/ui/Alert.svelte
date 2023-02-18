@@ -23,7 +23,7 @@
 	export let variant: keyof typeof variantMap = 'tertiary';
 	const variantClasses = variantMap[variant];
 
-	let classes = `${$blockSpacing} ${$typography} ${$borderRadius} ${$blockPadding} ${variantClasses} ${$panelShadow}`;
+	let classes = `${$blockSpacing} ${$typography} border-0 border-l-8  ${$borderRadius} ${$blockPadding} ${variantClasses} ${$panelShadow}`;
 </script>
 
 <div class={classes}><slot /></div>
