@@ -1,0 +1,21 @@
+name: Publish (playground)
+
+on: push
+branches:
+  - main
+
+jobs:
+  publish:
+    name: Publish to svelte-jawns.surge.sh
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build histoire
+        id: build
+        run: npm run story:build
+      - name: Deploy
+        uses: dswistowski/surge-sh-action@v1
+        with:
+          domain: 'svelte-jawns.surge.sh'
+          project: './histoire/dist/'
+          login: ${{ secrets.surge_login }}
+          token: ${{ secrets.surge_token }}
