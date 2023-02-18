@@ -27,7 +27,6 @@ specifiers:
   typescript: ^4.9.3
   vite: ^4.0.0
   vitest: ^0.25.3
-  zod: ^3.20.6
 
 devDependencies:
   '@histoire/plugin-svelte': 0.14.2_q72nmw3a5anfuiiy2wlqfvosfu
@@ -56,7 +55,6 @@ devDependencies:
   typescript: 4.9.5
   vite: 4.1.1
   vitest: 0.25.8
-  zod: 3.20.6
 
 packages:
 
@@ -3455,8 +3453,4 @@ packages:
   /yocto-queue/0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
-    dev: true
-
-  /zod/3.20.6:
-    resolution: {integrity: sha512-oyu0m54SGCtzh6EClBVqDDlAYRz4jrVtKwQ7ZnsEmMI9HnzuZFj8QFwAY1M5uniIYACdGvv0PBWPF2kO0aNofA==}
     dev: true
