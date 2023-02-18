@@ -64,7 +64,7 @@
 		variantClasses = outlineVariantMap[selectedOutlineVariant];
 	}
 
-	let allClasses = `${themeClasses} ${variantClasses} ${passThruClasses} font-semibold antialiased transition`;
+	let allClasses = `${themeClasses} ${variantClasses} ${passThruClasses} font-semibold antialiased transition uppercase`;
 </script>
 
 <button on:click disabled={isDisabled} class={allClasses}>

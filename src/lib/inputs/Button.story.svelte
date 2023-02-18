@@ -33,7 +33,9 @@
 		<Button variant="disabled">click me</Button>
 	</Hst.Variant>
 	<Hst.Variant title="Font sizes">
-		<Button variant="tertiary" class="mb-1.5 text-md">text-md</Button>
+		<br /><Button variant="tertiary" class="mb-1.5 text-xs">text-xs</Button>
+		<br /><Button variant="tertiary" class="mb-1.5 text-sm">text-sm</Button>
+		<br /><Button variant="tertiary" class="mb-1.5 text-md">text-md</Button>
 		<br /><Button variant="tertiary" class="mb-1.5 text-lg">text-lg</Button>
 		<br /><Button variant="tertiary" class="mb-1.5 text-xl">text-xl</Button>
 		<br /><Button variant="tertiary" class="mb-1.5 text-2xl">text-2xl</Button>
