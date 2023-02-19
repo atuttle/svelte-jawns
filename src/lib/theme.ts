@@ -5,7 +5,7 @@ export const transitionDurationMS = writable<number>(200);
 
 export const typography = writable<string>(`antialiased`);
 export const blockPadding = writable<string>(`px-4 py-2`);
-export const blockPaddingComfy = writable<string>(`px-4 py-4`);
+export const blockPaddingComfy = writable<string>(`p-4`);
 export const blockSpacing = writable<string>(`mb-4`);
 export const headings = writable<string>(`font-bold`);
 export const panelBg = writable<string>(`bg-zinc-100`);
