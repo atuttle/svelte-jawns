@@ -20,11 +20,14 @@ jobs:
           token: ${{ github.token }}
           branch: main
 
+      - uses: oleksiyrudenko/gha-git-credentials@v2-latest
+        with:
+          token: '${{ github.token }}'
+
       - name: npm version
         uses: reedyuk/npm-version@1.1.1
         with:
           version: ${{ steps.semver.outputs.next }}
-          token: ${{ github.token }}
           git-tag-version: 'true'
 
       - name: Update CHANGELOG
