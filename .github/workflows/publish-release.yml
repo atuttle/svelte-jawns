@@ -20,19 +20,19 @@ jobs:
           token: ${{ github.token }}
           branch: main
 
-      - name: Update CHANGELOG
-        id: changelog
-        uses: requarks/changelog-action@v1
-        with:
-          token: ${{ github.token }}
-          tag: ${{ github.ref_name }}
-          writeToFile: false
-
       - name: npm version
         uses: reedyuk/npm-version@1.1.1
         with:
           version: ${{ steps.semver.outputs.next }}
           git-tag-version: 'true'
+
+      - name: Update CHANGELOG
+        id: changelog
+        uses: requarks/changelog-action@v1
+        with:
+          token: ${{ github.token }}
+          tag: ${{ steps.semver.outputs.next }}
+          writeToFile: false
 
       - name: Create Release
         uses: ncipollo/release-action@v1.12.0
