@@ -38,6 +38,9 @@ jobs:
           tag: ${{ steps.semver.outputs.next }}
           writeToFile: false
 
+      - name: Push tag
+        run: git push --follow-tags
+
       - name: Create Release
         uses: ncipollo/release-action@v1.12.0
         with:
