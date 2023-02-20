@@ -1,0 +1,9 @@
+on:
+  pull_request:
+
+jobs:
+  conventional-commits:
+    runs-on: ubuntu-latest
+    steps:
+      - name: verify conventional commits
+        uses: taskmedia/action-conventional-commits@v1.1.0
