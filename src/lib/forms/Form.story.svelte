@@ -8,12 +8,22 @@
 
 <Hst.Story title="forms/Form">
 	<Form labelWidth="w-28">
-		<FormField label="First Name" labelFor="fname">
-			<TextInput type="text" value="Ford" id="fname" />
-		</FormField>
-		<FormField label="Last Name" labelFor="lname">
-			<TextInput type="text" value="Prefect" id="lname" />
-		</FormField>
+		<FormField
+			label="First Name"
+			labelFor="fname"
+			input={TextInput}
+			type="text"
+			value="Ford"
+			id="fname"
+		/>
+		<FormField
+			label="Last Name"
+			labelFor="lname"
+			input={TextInput}
+			type="text"
+			value="Prefect"
+			id="lname"
+		/>
 	</Form>
 
 	todo: errors, help notes
