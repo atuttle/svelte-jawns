@@ -12,13 +12,16 @@ jobs:
     steps:
       - name: Checkout Source Code
         id: git-checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+
       - name: Install dependencies
         id: dependencies
         run: npm i
+
       - name: Build histoire
         id: build
         run: npm run story:build
+
       - name: Deploy
         uses: dswistowski/surge-sh-action@v1
         with:
