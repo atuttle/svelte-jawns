@@ -6,12 +6,10 @@
 
 	import type { DataTableData, DataTableConfig } from '$lib/types';
 	const data: DataTableData = [
-		{ name: 'Tuttle', favoriteNumber: 1024 * 1024, livesInPA: true },
-		{ name: 'Crump', favoriteNumber: 100.51, livesInPA: false },
-		{ name: 'Paul', favoriteNumber: 1024 * 1024, livesInPA: true },
-		{ name: 'Rittler', favoriteNumber: 1024 * 1024 + 1, livesInPA: false },
-		{ name: 'Verostick', favoriteNumber: 1024, livesInPA: true },
-		{ name: 'McAuliffe', favoriteNumber: 1025, livesInPA: true }
+		{ name: 'Foo', favoriteNumber: 999, hasTheThing: true },
+		{ name: 'Bar', favoriteNumber: 99999, hasTheThing: false },
+		{ name: 'Baz', favoriteNumber: 99999999, hasTheThing: true },
+		{ name: 'Qux', favoriteNumber: 9999999999, hasTheThing: false }
 	];
 	const faveNumberFormatter = Intl.NumberFormat('en-US', {
 		style: 'decimal',
@@ -28,7 +26,7 @@
 			justify: 'right'
 		},
 		livesInPA: {
-			label: 'PA Resident?',
+			label: 'Has the thing?',
 			formatter: (value) => (Boolean(value) ? 'Yes' : 'No'),
 			justify: 'center'
 		}
@@ -36,5 +34,5 @@
 </script>
 
 <Hst.Story title="ui/DataTable">
-	<DataTable {data} {config} searchable sortable />
+	<DataTable {data} {config} searchable sortable sticky />
 </Hst.Story>

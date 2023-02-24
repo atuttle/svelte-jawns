@@ -23,6 +23,8 @@ export const alertColorsTertiary = writable<string>(`bg-slate-300 text-slate-800
 export const alertColorsDanger = writable<string>(`bg-red-200 text-red-800 border-red-700`);
 export const alertColorsSubtle = writable<string>(`bg-neutral-100 text-neutral-800 border-neutral-500`);
 
+export const tableHeader = writable<string>(`bg-slate-400 border-b-2 border-slate-600`);
+
 export const button = writable<string>(`border-2 px-4 py-2`);
 export const buttonColorsCTA = writable<string>('border-green-600 bg-green-600 text-gray-100 hover:bg-green-500 hover:border-green-500');
 export const buttonColorsCTAOutline = writable<string>(
