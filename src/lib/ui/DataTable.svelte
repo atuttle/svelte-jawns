@@ -144,12 +144,17 @@
 			{#each finalData as row}
 				<tr class="odd:bg-gray-100 hover:bg-slate-200">
 					{#each columns as column}
-						{#if config[column]}
-							{#if (config[column].hidden ?? false) === false}
-								<td class="p-2 {alignment[column]}">{row[column]}</td>
-							{/if}
-						{:else}
-							<td class="p-2 {alignment[column]}">{row[column]}</td>
+						{#if !config[column] || (config[column].hidden ?? false) === false}
+							<td class="p-2 {alignment[column]}">
+								{#if config[column].link}
+									<a
+										href={config[column].link?.call(null, row[column], row)}
+										target={config[column].linkTarget ?? undefined}>{row[column]}</a
+									>
+								{:else}
+									{row[column]}
+								{/if}
+							</td>
 						{/if}
 					{/each}
 				</tr>

@@ -43,9 +43,10 @@
 			label: 'Fave Number',
 			formatter: (value) =>
 				typeof value === 'string' ? value : faveNumberFormatter.format(Number(value)),
-			justify: 'right'
+			justify: 'right',
+			link: (val) => `https://www.google.com/search?q=${val}`
 		},
-		livesInPA: {
+		hasTheThing: {
 			label: 'Has the thing?',
 			formatter: (value) => (Boolean(value) ? 'Yes' : 'No'),
 			justify: 'center'

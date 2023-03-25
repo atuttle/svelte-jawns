@@ -25,5 +25,7 @@ type DataTableColumnConfig = Partial<{
 	sortable: boolean;
 	hidden: boolean;
 	formatter: (value: ValuePrimitive, row: DataTableData[number]) => ValuePrimitive;
+	link: (value: ValuePrimitive, row: DataTableData[number]) => string;
+	linkTarget: '_blank' | '_self' | '_parent' | '_top' | string;
 }>;
 export type DataTableConfig = { [key: string]: DataTableColumnConfig };
