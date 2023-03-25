@@ -2,6 +2,7 @@ export * from './DOM/Modal.svelte';
 export * from './DOM/Portal.svelte';
 export * from './forms/Form.svelte';
 export * from './forms/FormField.svelte';
+export * from './forms/FormFieldDisplay.svelte';
 export * from './inputs/Button.svelte';
 export * from './inputs/ButtonGroup.svelte';
 export * from './inputs/InputGroup.svelte';
