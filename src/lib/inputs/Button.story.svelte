@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Button from '$lib/inputs/Button.svelte';
+	import LinkButton from '$lib/inputs/LinkButton.svelte';
 
 	import type { Hst } from '@histoire/plugin-svelte';
 
@@ -31,6 +32,12 @@
 	</Hst.Variant>
 	<Hst.Variant title="Disabled">
 		<Button variant="disabled">click me</Button>
+	</Hst.Variant>
+	<Hst.Variant title="Link Button">
+		<LinkButton variant="cta">click me</LinkButton>
+		<LinkButton variant="cta" outline={true}>click me</LinkButton>
+		<LinkButton variant="cta" outline={true} disabled={true}>click me</LinkButton>
+		<LinkButton variant="cta" disabled={true}>click me</LinkButton>
 	</Hst.Variant>
 	<Hst.Variant title="Font sizes">
 		<br /><Button variant="tertiary" class="mb-1.5 text-xs">text-xs</Button>
