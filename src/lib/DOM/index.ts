@@ -1,2 +1,2 @@
-export * from './Modal.svelte';
-export * from './Portal.svelte';
+export { default as Modal } from './Modal.svelte';
+export { default as Portal } from './Portal.svelte';
