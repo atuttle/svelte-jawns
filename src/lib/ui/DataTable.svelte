@@ -98,34 +98,40 @@
 		<thead>
 			<tr class="font-bold">
 				{#each columns as column}
-					{#if config[column] && config[column].label}
-						<th class="p-0" class:sticky>
-							<!-- you can put most of the style on the TH but the borders scroll up when sticky which is weird and dumb -->
-							<div class="p-2 {$tableHeader} {alignment[column]}">
-								{config[column].label}
-								{#if sortable}
-									<button
-										class="text-xs text-slate-100 hover:text-slate-200"
-										on:click={() => {
-											if (sortColumn == column && sortDirection === 'asc') {
-												sortDirection = 'desc';
-											} else if (sortColumn == column && sortDirection === 'desc') {
-												sortDirection = 'asc';
-												sortColumn = '';
-											} else {
-												sortColumn = column;
-												sortDirection = 'asc';
-											}
-										}}
-									>
-										<!-- TODO: need a better unsorted placeholder character -->
-										<span class="text-xl">
-											{sortColumn == column ? (sortDirection == 'asc' ? '↑' : '↓') : '↕'}
-										</span>
-									</button>
-								{/if}
-							</div>
-						</th>
+					{#if config[column]}
+						{#if config[column].hidden ?? false === false}
+							<th class="p-0" class:sticky>
+								<!-- you can put most of the style on the TH but the borders scroll up when sticky which is weird and dumb -->
+								<div class="p-2 {$tableHeader} {alignment[column]}">
+									{#if config[column].label}
+										{config[column].label}
+									{:else}
+										{column}
+									{/if}
+									{#if sortable}
+										<button
+											class="text-xs text-slate-100 hover:text-slate-200"
+											on:click={() => {
+												if (sortColumn == column && sortDirection === 'asc') {
+													sortDirection = 'desc';
+												} else if (sortColumn == column && sortDirection === 'desc') {
+													sortDirection = 'asc';
+													sortColumn = '';
+												} else {
+													sortColumn = column;
+													sortDirection = 'asc';
+												}
+											}}
+										>
+											<!-- TODO: need a better unsorted placeholder character -->
+											<span class="text-xl">
+												{sortColumn == column ? (sortDirection == 'asc' ? '↑' : '↓') : '↕'}
+											</span>
+										</button>
+									{/if}
+								</div>
+							</th>
+						{/if}
 					{:else}
 						<th class="p-2 {alignment[column]}">
 							{column}
@@ -138,7 +144,13 @@
 			{#each finalData as row}
 				<tr class="odd:bg-gray-100 hover:bg-slate-200">
 					{#each columns as column}
-						<td class="p-2 {alignment[column]}">{row[column]}</td>
+						{#if config[column]}
+							{#if config[column].hidden ?? false === false}
+								<td class="p-2 {alignment[column]}">{row[column]}</td>
+							{/if}
+						{:else}
+							<td class="p-2 {alignment[column]}">{row[column]}</td>
+						{/if}
 					{/each}
 				</tr>
 			{/each}

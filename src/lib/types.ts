@@ -23,6 +23,7 @@ type DataTableColumnConfig = Partial<{
 	label: string;
 	justify: 'left' | 'right' | 'center';
 	sortable: boolean;
+	hidden: boolean;
 	formatter: (value: ValuePrimitive, row: DataTableData[number]) => ValuePrimitive;
 }>;
 export type DataTableConfig = { [key: string]: DataTableColumnConfig };
