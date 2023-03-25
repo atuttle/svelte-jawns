@@ -6,10 +6,30 @@
 
 	import type { DataTableData, DataTableConfig } from '$lib/types';
 	const data: DataTableData = [
-		{ name: 'Foo', favoriteNumber: 999, hasTheThing: true },
-		{ name: 'Bar', favoriteNumber: 99999, hasTheThing: false },
-		{ name: 'Baz', favoriteNumber: 99999999, hasTheThing: true },
-		{ name: 'Qux', favoriteNumber: 9999999999, hasTheThing: false }
+		{
+			name: 'Foo',
+			favoriteNumber: 999,
+			hasTheThing: true,
+			invisible: 'this should not be displayed'
+		},
+		{
+			name: 'Bar',
+			favoriteNumber: 99999,
+			hasTheThing: false,
+			invisible: 'this should not be displayed'
+		},
+		{
+			name: 'Baz',
+			favoriteNumber: 99999999,
+			hasTheThing: true,
+			invisible: 'this should not be displayed'
+		},
+		{
+			name: 'Qux',
+			favoriteNumber: 9999999999,
+			hasTheThing: false,
+			invisible: 'this should not be displayed'
+		}
 	];
 	const faveNumberFormatter = Intl.NumberFormat('en-US', {
 		style: 'decimal',
@@ -29,6 +49,9 @@
 			label: 'Has the thing?',
 			formatter: (value) => (Boolean(value) ? 'Yes' : 'No'),
 			justify: 'center'
+		},
+		invisible: {
+			hidden: true
 		}
 	};
 </script>
