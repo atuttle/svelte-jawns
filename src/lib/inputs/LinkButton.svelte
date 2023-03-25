@@ -65,7 +65,7 @@
 		variantClasses = outlineVariantMap[selectedOutlineVariant];
 	}
 
-	let allClasses = `${themeClasses} ${variantClasses} ${passThruClasses} inline-block font-semibold antialiased transition uppercase`;
+	let allClasses = `${themeClasses} ${variantClasses} ${passThruClasses} inline-block no-underline font-semibold antialiased transition uppercase`;
 </script>
 
 <a {href} class={allClasses}>
