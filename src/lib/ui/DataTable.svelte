@@ -19,7 +19,7 @@
 	const columns = Object.keys(data[0]);
 
 	// allow us to assume that every column has a formatting function by providing a default
-	let formatters: { [key: string]: (i: any) => any } = {};
+	let formatters: { [key: string]: (i: any, row: any) => any } = {};
 	let alignment: { [key: string]: 'text-left' | 'text-right' | 'text-center' } = {};
 
 	columns.forEach((column) => {
@@ -66,7 +66,7 @@
 	const applyFormat = (data: DataTableData) =>
 		data.map((row) => {
 			columns.forEach((column) => {
-				row[column] = formatters[column](row[column]);
+				row[column] = formatters[column](row[column], row);
 			});
 			return row;
 		});

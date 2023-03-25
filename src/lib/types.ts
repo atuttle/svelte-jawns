@@ -17,7 +17,12 @@ export interface Theme {
 }
 
 type ValuePrimitive = string | number | boolean | null;
-export type DataTableData = Array<{ [key: string]: ValuePrimitive }>
+export type DataTableData = Array<{ [key: string]: ValuePrimitive }>;
 
-type DataTableColumnConfig = Partial<{ label: string, justify: 'left' | 'right' | 'center', sortable: boolean, formatter: (value: ValuePrimitive) => ValuePrimitive }>
+type DataTableColumnConfig = Partial<{
+	label: string;
+	justify: 'left' | 'right' | 'center';
+	sortable: boolean;
+	formatter: (value: ValuePrimitive, row: DataTableData[number]) => ValuePrimitive;
+}>;
 export type DataTableConfig = { [key: string]: DataTableColumnConfig };
