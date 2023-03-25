@@ -1,2 +1,3 @@
-export { default as Code } from './Code.svelte';
-export { default as Heading } from './Heading.svelte';
+export * from './Code.svelte';
+export * from './GradientText.svelte';
+export * from './Heading.svelte';

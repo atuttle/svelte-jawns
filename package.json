@@ -29,6 +29,9 @@
 		"story:build": "histoire build",
 		"story:preview": "histoire preview"
 	},
+	"peerDependencies": {
+		"svelte": "^3.0.0"
+	},
 	"devDependencies": {
 		"@histoire/plugin-svelte": "^0.14.2",
 		"@playwright/test": "^1.28.1",

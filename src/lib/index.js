@@ -1,4 +1,3 @@
-// Reexport your entry components here
 export * from './DOM/Modal.svelte';
 export * from './DOM/Portal.svelte';
 export * from './forms/Form.svelte';
@@ -22,6 +21,6 @@ export * from './ui/DataTable.svelte';
 export * from './ui/Dialog.svelte';
 export * from './ui/ModalDialog.svelte';
 export * from './ui/Panel.svelte';
+export * from './ui/Toast';
 export * from './ui/Toaster.svelte';
 export * from './ui/ToastMessage.svelte';
-export * from './ui/Toast';
