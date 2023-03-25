@@ -71,15 +71,15 @@
 			return row;
 		});
 
-	const applyFilter = (data: DataTableData) =>
+	const applyFilter = (data: DataTableData, q: string) =>
 		data.filter((row) => {
 			return columns.some((column) => {
-				return String(row[column]).toLowerCase().includes(searchQuery.toLowerCase());
+				return String(row[column]).toLowerCase().includes(q.toLowerCase());
 			});
 		});
 
 	let finalData: DataTableData;
-	$: finalData = applyFilter(applyFormat(applySort(data, sortColumn, sortDirection)));
+	$: finalData = applyFilter(applyFormat(applySort(data, sortColumn, sortDirection)), searchQuery);
 </script>
 
 <div>
