@@ -17,6 +17,6 @@
 <div class={wrapperClasses}>
 	<label for={id} class={labelClasses}>{label}</label>
 	<div class="flex-1">
-		{value}
+		<slot>{value}</slot>
 	</div>
 </div>
