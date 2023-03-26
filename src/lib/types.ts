@@ -1,3 +1,7 @@
+import type { Validation } from 'sveltekit-superforms';
+import type { AnyZodObject } from 'zod';
+import type { Writable } from 'svelte/store';
+
 export type HeadingLevel = 1 | 2 | 3 | 4 | 5 | 6;
 
 export type InputType = 'text' | 'email' | 'password' | 'tel' | 'search' | 'date' | 'time' | 'url';
@@ -29,3 +33,12 @@ type DataTableColumnConfig = Partial<{
 	linkTarget: '_blank' | '_self' | '_parent' | '_top' | string;
 }>;
 export type DataTableConfig = { [key: string]: DataTableColumnConfig };
+
+export type SuperformForm = Writable<Record<string, any>>;
+export type SuperformErrors = Writable<Validation<AnyZodObject, any>['errors']>;
+export type SuperformConstraints = Writable<Validation<AnyZodObject, any>['constraints']>;
+export type SuperformContext = {
+	form: SuperformForm;
+	errors: SuperformErrors;
+	constraints: SuperformConstraints;
+};

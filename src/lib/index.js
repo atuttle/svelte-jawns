@@ -3,6 +3,8 @@ export * from './DOM/Portal.svelte';
 export * from './forms/Form.svelte';
 export * from './forms/FormField.svelte';
 export * from './forms/FormFieldDisplay.svelte';
+export * from './forms/SuperForm.svelte';
+export * from './forms/SuperFormField.svelte';
 export * from './inputs/Button.svelte';
 export * from './inputs/ButtonGroup.svelte';
 export * from './inputs/Checkbox.svelte';
