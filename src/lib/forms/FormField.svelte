@@ -1,19 +1,18 @@
 <script lang="ts">
 	import { hasContext, getContext } from 'svelte';
-
 	import type { ComponentType, SvelteComponentTyped } from 'svelte';
+
+	if (!hasContext('form-label-width')) {
+		throw new Error('FormField must be used within a Form component');
+	}
+	const labelWidth: string = getContext('form-label-width');
 
 	export let input: ComponentType<SvelteComponentTyped> | string;
 	export let label: string = '';
 	export let id: string = '';
 	export let stack: boolean = false;
-
-	const labelWidth: string = hasContext('form-label-width')
-		? getContext('form-label-width')
-		: 'w-1/4';
-
-	const labelClasses = `inline-block h-full pt-2 pr-4 text-right font-semibold ${labelWidth}`;
-	const wrapperClasses = `flex max-w-full items-start py-2 ${stack ? 'flex-col' : ''}`;
+	export let labelClasses: string = `inline-block h-full pt-2 pr-4 text-right font-semibold ${labelWidth}`;
+	export let wrapperClasses: string = `flex max-w-full items-start py-2 ${stack ? 'flex-col' : ''}`;
 </script>
 
 <div class={wrapperClasses}>
