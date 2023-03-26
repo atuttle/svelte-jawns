@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { toggleBgOff, toggleSwitchOn } from '$lib/theme';
+	import { toggleBgOff, toggleSwitchOn, toggleSwitchOff } from '$lib/theme';
 
 	export let group: string;
 	export let value: string;
@@ -10,6 +10,7 @@
 		--border: 1px solid #333;
 		--radius: var(--width, 50%);
 		--bg: ${$toggleBgOff};
+		--bgHover: ${$toggleSwitchOff};
 		--fg: ${$toggleSwitchOn};
 	`;
 </script>
@@ -46,6 +47,10 @@
 		background-color: var(--bg);
 		margin-right: 10px;
 		flex-shrink: 0;
+	}
+
+	.radio:hover {
+		background-color: var(--bgHover);
 	}
 
 	.radio::after {

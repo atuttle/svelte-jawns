@@ -5,6 +5,7 @@ export * from './forms/FormField.svelte';
 export * from './forms/FormFieldDisplay.svelte';
 export * from './inputs/Button.svelte';
 export * from './inputs/ButtonGroup.svelte';
+export * from './inputs/Checkbox.svelte';
 export * from './inputs/InputGroup.svelte';
 export * from './inputs/LinkButton.svelte';
 export * from './inputs/NumberInput.svelte';

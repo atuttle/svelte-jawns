@@ -1,5 +1,6 @@
 export { default as Button } from './Button.svelte';
 export { default as ButtonGroup } from './ButtonGroup.svelte';
+export { default as Checkbox } from './Checkbox.svelte';
 export { default as InputGroup } from './InputGroup.svelte';
 export { default as LinkButton } from './LinkButton.svelte';
 export { default as NumberInput } from './NumberInput.svelte';
