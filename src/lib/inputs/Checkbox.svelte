@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { borderRadius, toggleBgOff, toggleSwitchOff, toggleSwitchOn } from '$lib/theme';
 
+	export let name: string;
 	export let value: string;
 	export let checked: boolean;
 	export let size: number = 24;
@@ -18,7 +19,7 @@
 </script>
 
 <label style={defaultStyles}>
-	<input type="checkbox" bind:checked {value} />
+	<input type="checkbox" bind:checked {name} {value} />
 	<span class={$borderRadius} />
 	<div class="label"><slot /></div>
 </label>
