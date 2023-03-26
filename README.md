@@ -8,6 +8,8 @@ Work still very much in progress: [1.0 Checklist](https://github.com/atuttle/sve
 
 [See component demos here](https://svelte-jawns.surge.sh)
 
+⚠️ 🖐️ Per [SemVer 2.0.0 rule #4](https://semver.org/#spec-item-4) breaking changes are allowed in every `v0.x.y` release breaking changes. Upgrade with caution. There be dragons here.
+
 ## Usage
 
 To use these components in your project you must have Tailwind installed (and why wouldn't you? it rocks!) and make 1 required config change so that the Tailwind JIT compiler will handle all of the classes used in `svelte-jawns`:
