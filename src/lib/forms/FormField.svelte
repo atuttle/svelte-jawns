@@ -18,10 +18,12 @@
 <div class={wrapperClasses}>
 	<label for={id} class={labelClasses}>{label}</label>
 	<div class="flex-1">
-		{#if typeof input === 'string'}
-			<svelte:element this={input} {id} {...$$restProps} />
-		{:else}
-			<svelte:component this={input} {id} {...$$restProps} />
-		{/if}
+		<slot>
+			{#if typeof input === 'string'}
+				<svelte:element this={input} {id} {...$$restProps} />
+			{:else}
+				<svelte:component this={input} {id} name={id} {...$$restProps} />
+			{/if}
+		</slot>
 	</div>
 </div>
