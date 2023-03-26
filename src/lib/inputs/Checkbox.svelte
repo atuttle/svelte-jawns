@@ -19,7 +19,7 @@
 </script>
 
 <label style={defaultStyles}>
-	<input type="checkbox" bind:checked {name} {value} />
+	<input type="checkbox" bind:checked {name} {value} {...$$restProps} />
 	<span class={$borderRadius} />
 	<div class="label"><slot /></div>
 </label>

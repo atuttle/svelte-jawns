@@ -24,6 +24,6 @@
 	}
 </script>
 
-<select bind:value class={classes}>
+<select bind:value class={classes} {...$$restProps}>
 	<slot />
 </select>

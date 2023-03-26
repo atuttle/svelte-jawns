@@ -44,7 +44,7 @@
 </script>
 
 <label {style}>
-	<input type="checkbox" bind:checked />
+	<input type="checkbox" bind:checked {...$$restProps} />
 	<div class="toggle" />
 	<slot />
 </label>

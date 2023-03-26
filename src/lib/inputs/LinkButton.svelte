@@ -68,6 +68,6 @@
 	let allClasses = `${themeClasses} ${variantClasses} ${passThruClasses} inline-block no-underline font-semibold antialiased transition uppercase`;
 </script>
 
-<a {href} class={allClasses}>
+<a {href} class={allClasses} {...$$restProps}>
 	<slot />
 </a>

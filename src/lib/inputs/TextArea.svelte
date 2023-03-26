@@ -9,4 +9,4 @@
 	let classes = `${$borderRadius} ${$textInput} ${passThruClasses}`;
 </script>
 
-<textarea bind:value class={classes} {rows} />
+<textarea bind:value class={classes} {rows} {...$$restProps} />
