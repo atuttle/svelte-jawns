@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { hasContext, getContext } from 'svelte';
 	import type { ComponentType, SvelteComponentTyped } from 'svelte';
+	import { errorBlock } from '$lib/theme';
 
 	if (!hasContext('form-label-width')) {
 		throw new Error('FormField must be used within a Form component');
@@ -45,7 +46,7 @@
 				/>
 			{/if}
 			{#if $errors[id]}
-				<span class="text-rose-700">{$errors[id]}</span>
+				<span class={$errorBlock}>{$errors[id]}</span>
 			{/if}
 		</slot>
 	</div>

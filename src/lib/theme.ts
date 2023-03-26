@@ -18,6 +18,8 @@ export const borderLeftRadius = writable<string>(`rounded-b`);
 export const borderBottomRadius = writable<string>(`rounded-l`);
 export const disabled = writable<string>('cursor-not-allowed');
 
+export const errorBlock = writable<string>('text-white bg-red-800 p-2 rounded');
+
 export const alertColorsCTA = writable<string>(`bg-green-200 text-green-800 border-green-600`);
 export const alertColorsTertiary = writable<string>(`bg-slate-300 text-slate-800 border-slate-500`);
 export const alertColorsDanger = writable<string>(`bg-red-200 text-red-800 border-red-700`);
@@ -64,7 +66,7 @@ export const textInput = writable<string>(
 	`px-4 py-2 rounded border-slate-300 bg-slate-50 text-slate-800 w-full`
 );
 
-export const toggleBgOff = writable<string>('#e5e5e5');
+export const toggleBgOff = writable<string>('rgb(244 244 245)');
 export const toggleBgOn = writable<string>('#dcfce7');
 export const toggleBgBorderOff = writable<string>('1px solid transparent');
 export const toggleBgBorderOn = writable<string>('1px solid transparent');
