@@ -9,6 +9,7 @@
 	} from '$lib/theme';
 
 	export let checked: boolean = false;
+	export let value: string = '1';
 	export let size: number = 30;
 	export let gutterBGColorOff: string = '';
 	export let gutterBGColorOn: string = '';
@@ -44,7 +45,7 @@
 </script>
 
 <label {style}>
-	<input type="checkbox" bind:checked {...$$restProps} />
+	<input type="checkbox" bind:checked {...$$restProps} {value} />
 	<div class="toggle" />
 	<slot />
 </label>
