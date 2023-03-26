@@ -67,6 +67,6 @@
 	let allClasses = `${themeClasses} ${variantClasses} ${passThruClasses} inline-block no-underline font-semibold antialiased transition uppercase`;
 </script>
 
-<button on:click disabled={isDisabled} class={allClasses}>
+<button on:click disabled={isDisabled} class={allClasses} {...$$restProps}>
 	<slot />
 </button>
