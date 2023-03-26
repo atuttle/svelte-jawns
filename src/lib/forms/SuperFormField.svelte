@@ -30,7 +30,8 @@
 				<svelte:element
 					this={input}
 					{id}
-					data-invalid={$errors[id]}
+					aria-invalid={Boolean($errors[id])}
+					aria-errormessage={Array($errors[id]).join('. ')}
 					{...$constraints[id]}
 					{...$$restProps}
 				/>
@@ -39,14 +40,15 @@
 					this={input}
 					{id}
 					name={id}
-					data-invalid={$errors[id]}
+					aria-invalid={Boolean($errors[id])}
+					aria-errormessage={Array($errors[id]).join('. ')}
 					bind:value={$form[id]}
 					{...$constraints[id]}
 					{...$$restProps}
 				/>
 			{/if}
 			{#if $errors[id]}
-				<span class={$errorBlock}>{$errors[id]}</span>
+				<div class={$errorBlock}>{Array($errors[id]).join('. ')}</div>
 			{/if}
 		</slot>
 	</div>

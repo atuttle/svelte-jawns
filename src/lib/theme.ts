@@ -63,7 +63,7 @@ export const textInputAddon = writable<string>(
 	'border-slate-300 bg-slate-200 text-slate-800 border px-2'
 );
 export const textInput = writable<string>(
-	`px-4 py-2 rounded border-slate-300 bg-slate-50 text-slate-800 w-full`
+	`px-4 py-2 rounded border-slate-300 bg-slate-50 text-slate-800 w-full aria-[invalid]:bg-rose-200 aria-[invalid]:text-red-900 aria-[invalid]:border-red-900 aria-[invalid]:border-2`
 );
 
 export const toggleBgOff = writable<string>('rgb(244 244 245)');
