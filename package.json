@@ -1,6 +1,6 @@
 {
 	"name": "svelte-jawns",
-	"version": "0.0.19",
+	"version": "0.0.20",
 	"license": "MIT",
 	"type": "module",
 	"description": "A customizable Svelte component library built with Tailwind and TypeScript",
